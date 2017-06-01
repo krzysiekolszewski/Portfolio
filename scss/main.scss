@@ -1,0 +1,69 @@
+@import "grid";
+*{
+    font-family: 'Raleway', sans-serif;
+ }
+ .container{
+   width: 100%;
+   max-width: 1024px;
+   margin: 0 auto;
+ }
+ ul{
+     list-style-type: none;
+     display: flex;
+     justify-content: space-around;
+ }
+ .menu{
+     height: 10vh
+ }
+ .menu nav ul li{
+     color: white;
+     text-transform: uppercase;
+     &:hover{
+         background-color: lightgrey;
+     }
+ }
+.name{
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    font-size: 2rem;
+    height: 75vh;
+}
+.header{
+    height: 100vh;
+    width: 100vw;
+}
+.git_icon{
+    fill: lightgrey;
+}
+.git_icon:hover{
+    fill: white;
+}
+
+.linked_icon{
+    fill: lightgrey;
+
+}
+.linked_icon:hover{
+    fill: white;
+    fill-rule: nonzero;
+}
+
+.gmail_icon{
+    fill: lightgrey;
+
+}
+.gmail_icon:hover{
+    fill: white;
+    fill-rule: nonzero;
+}
+
+#icon_position{
+    text-align: center;
+}
+.links{
+    height: 10vh;
+}
+.footer{
+    height: 5vh;
+}

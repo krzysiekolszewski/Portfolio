@@ -1,0 +1,53 @@
+$cols: 12; //deklarujemy 12 kolumn//
+$width-base: (100%/$cols);//dzielimy całość na liczbę kolumn (Wyzej)//
+
+@mixin centered { //mixin do wyśrodkowania grida
+    margin-left: auto;
+    margin-right: auto;
+
+}
+%clearfix { //clearfix
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+.grid{ //kontener w którym zamknięta jest cała strona
+    width: 100%; //kontener główny ma się rozpychać
+    max-width: 70rem; //80 standardowej czcionki (czyli 80*16px = 1280px)
+}
+
+.row{ //wiersz
+    @extend %clearfix; // wklejamy clearfixa, żeby trzymał nam row
+}
+
+*{
+    box-sizing: border-box; //wszytko na borderbox
+}
+
+[class*="col-"]{ //selektor css, ktory dopasoywuje do wszystkiego co zaczyna sie od col
+    float: left; //płyną od lewej
+    min-height: 1px; //musimy ustalić min wysokość, inaczej bedzie miał wys 0 i zostanie zignorowany przez przeglądarkę
+    width: 100%;
+    border: 2px solid black; //żeby bylo widac lepiej
+    //gutter:
+    padding: 0.5rem;
+}
+
+@media (min-width: 20rem) {
+
+    @for $i from 1 through $cols {
+        .col-#{$i} {
+            width: $width-base*$i;
+        }
+    }
+}
+
+@for $i from 1 through $cols{ // od 1 do ilości kolumn
+    .col-#{$i}{ //numer kolumny
+        width: $width-base*$i; //width-base razy liczba kolumn
+    }
+}
