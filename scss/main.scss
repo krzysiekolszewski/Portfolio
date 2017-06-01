@@ -2,6 +2,9 @@
 *{
     font-family: 'Raleway', sans-serif;
  }
+ body{
+     background-repeat: no-repeat;
+ }
  .container{
    width: 100%;
    max-width: 1024px;
@@ -19,15 +22,20 @@
      color: white;
      text-transform: uppercase;
      &:hover{
-         background-color: lightgrey;
+         font-size: 1.3rem;
      }
+ }
+
+ .menu nav ul a{
+     text-decoration: none;
  }
 .name{
     text-align: center;
     font-weight: bold;
     color: white;
-    font-size: 2rem;
+    font-size: 2.5rem;
     height: 75vh;
+    padding-top: 25vh;
 }
 .header{
     height: 100vh;
@@ -66,4 +74,24 @@
 }
 .footer{
     height: 5vh;
+    float: right;
+    font-size: 0.8rem;
+    text-align: center;
+
+}
+
+
+
+
+.app{
+  width: 80px;
+  height: 80px;
+  -webkit-transition: all 0.3s;
+  -webkit-transform-origin: 50% 100%;
+  margin-right: 10px;
+  display: inline-block;
+}
+.app:hover {
+  -webkit-transform: scale(1.5);
+  margin: 0 1em;
 }

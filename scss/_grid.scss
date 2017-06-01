@@ -32,7 +32,7 @@ $width-base: (100%/$cols);//dzielimy całość na liczbę kolumn (Wyzej)//
     float: left; //płyną od lewej
     min-height: 1px; //musimy ustalić min wysokość, inaczej bedzie miał wys 0 i zostanie zignorowany przez przeglądarkę
     width: 100%;
-    border: 2px solid black; //żeby bylo widac lepiej
+    // border: 2px solid black; //żeby bylo widac lepiej
     //gutter:
     padding: 0.5rem;
 }
