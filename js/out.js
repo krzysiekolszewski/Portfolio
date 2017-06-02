@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 2);
+/******/ 	return __webpack_require__(__webpack_require__.s = 1);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -73,7 +73,7 @@
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(3);
+var content = __webpack_require__(2);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -81,7 +81,7 @@ var transform;
 var options = {}
 options.transform = transform
 // add the styles to the DOM
-var update = __webpack_require__(5)(content, options);
+var update = __webpack_require__(4)(content, options);
 if(content.locals) module.exports = content.locals;
 // Hot Module Replacement
 if(false) {
@@ -98,8 +98,7 @@ if(false) {
 }
 
 /***/ }),
-/* 1 */,
-/* 2 */
+/* 1 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -109,21 +108,21 @@ __webpack_require__(0);
 document.addEventListener('DOMContentLoaded', function () {});
 
 /***/ }),
-/* 3 */
+/* 2 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(4)(undefined);
+exports = module.exports = __webpack_require__(3)(undefined);
 // imports
 
 
 // module
-exports.push([module.i, ".row:before,\n.row:after {\n  content: \"\";\n  display: table;\n  clear: both;\n}\n\n.grid {\n  width: 100%;\n  max-width: 70rem;\n}\n\n* {\n  box-sizing: border-box;\n}\n\n[class*=\"col-\"] {\n  float: left;\n  min-height: 1px;\n  width: 100%;\n  padding: 0.5rem;\n}\n\n@media (min-width: 20rem) {\n  .col-1 {\n    width: 8.33333%;\n  }\n\n  .col-2 {\n    width: 16.66667%;\n  }\n\n  .col-3 {\n    width: 25%;\n  }\n\n  .col-4 {\n    width: 33.33333%;\n  }\n\n  .col-5 {\n    width: 41.66667%;\n  }\n\n  .col-6 {\n    width: 50%;\n  }\n\n  .col-7 {\n    width: 58.33333%;\n  }\n\n  .col-8 {\n    width: 66.66667%;\n  }\n\n  .col-9 {\n    width: 75%;\n  }\n\n  .col-10 {\n    width: 83.33333%;\n  }\n\n  .col-11 {\n    width: 91.66667%;\n  }\n\n  .col-12 {\n    width: 100%;\n  }\n}\n\n.col-1 {\n  width: 8.33333%;\n}\n\n.col-2 {\n  width: 16.66667%;\n}\n\n.col-3 {\n  width: 25%;\n}\n\n.col-4 {\n  width: 33.33333%;\n}\n\n.col-5 {\n  width: 41.66667%;\n}\n\n.col-6 {\n  width: 50%;\n}\n\n.col-7 {\n  width: 58.33333%;\n}\n\n.col-8 {\n  width: 66.66667%;\n}\n\n.col-9 {\n  width: 75%;\n}\n\n.col-10 {\n  width: 83.33333%;\n}\n\n.col-11 {\n  width: 91.66667%;\n}\n\n.col-12 {\n  width: 100%;\n}\n\n* {\n  font-family: 'Raleway', sans-serif;\n}\n\nbody {\n  background-repeat: no-repeat;\n}\n\n.container {\n  width: 100%;\n  max-width: 1024px;\n  margin: 0 auto;\n}\n\nul {\n  list-style-type: none;\n  display: flex;\n  justify-content: space-around;\n}\n\n.menu {\n  height: 10vh;\n}\n\n.menu nav ul li {\n  color: white;\n  text-transform: uppercase;\n}\n\n.menu nav ul li:hover {\n  font-size: 1.3rem;\n}\n\n.menu nav ul a {\n  text-decoration: none;\n}\n\n.name {\n  text-align: center;\n  font-weight: bold;\n  color: white;\n  font-size: 2.5rem;\n  height: 75vh;\n  padding-top: 25vh;\n}\n\n.header {\n  height: 100vh;\n  width: 100vw;\n}\n\n.git_icon {\n  fill: lightgrey;\n}\n\n.git_icon:hover {\n  fill: white;\n}\n\n.linked_icon {\n  fill: lightgrey;\n}\n\n.linked_icon:hover {\n  fill: white;\n  fill-rule: nonzero;\n}\n\n.gmail_icon {\n  fill: lightgrey;\n}\n\n.gmail_icon:hover {\n  fill: white;\n  fill-rule: nonzero;\n}\n\n#icon_position {\n  text-align: center;\n}\n\n.links {\n  height: 10vh;\n}\n\n.footer {\n  height: 5vh;\n  float: right;\n  font-size: 0.8rem;\n  text-align: center;\n}\n\n.app {\n  width: 80px;\n  height: 80px;\n  -webkit-transition: all 0.3s;\n  -webkit-transform-origin: 50% 100%;\n  margin-right: 10px;\n  display: inline-block;\n}\n\n.app:hover {\n  -webkit-transform: scale(1.5);\n  margin: 0 1em;\n}", ""]);
+exports.push([module.i, ".row:before,\n.row:after {\n  content: \"\";\n  display: table;\n  clear: both;\n}\n\n.grid {\n  width: 100%;\n  max-width: 70rem;\n}\n\n* {\n  box-sizing: border-box;\n}\n\n[class*=\"col-\"] {\n  float: left;\n  min-height: 1px;\n  width: 100%;\n  padding: 0.5rem;\n}\n\n@media (min-width: 20rem) {\n  .col-1 {\n    width: 8.33333%;\n  }\n\n  .col-2 {\n    width: 16.66667%;\n  }\n\n  .col-3 {\n    width: 25%;\n  }\n\n  .col-4 {\n    width: 33.33333%;\n  }\n\n  .col-5 {\n    width: 41.66667%;\n  }\n\n  .col-6 {\n    width: 50%;\n  }\n\n  .col-7 {\n    width: 58.33333%;\n  }\n\n  .col-8 {\n    width: 66.66667%;\n  }\n\n  .col-9 {\n    width: 75%;\n  }\n\n  .col-10 {\n    width: 83.33333%;\n  }\n\n  .col-11 {\n    width: 91.66667%;\n  }\n\n  .col-12 {\n    width: 100%;\n  }\n}\n\n.col-1 {\n  width: 8.33333%;\n}\n\n.col-2 {\n  width: 16.66667%;\n}\n\n.col-3 {\n  width: 25%;\n}\n\n.col-4 {\n  width: 33.33333%;\n}\n\n.col-5 {\n  width: 41.66667%;\n}\n\n.col-6 {\n  width: 50%;\n}\n\n.col-7 {\n  width: 58.33333%;\n}\n\n.col-8 {\n  width: 66.66667%;\n}\n\n.col-9 {\n  width: 75%;\n}\n\n.col-10 {\n  width: 83.33333%;\n}\n\n.col-11 {\n  width: 91.66667%;\n}\n\n.col-12 {\n  width: 100%;\n}\n\n* {\n  font-family: 'Raleway', sans-serif;\n  color: white;\n}\n\nbody {\n  background-repeat: no-repeat;\n}\n\n.container {\n  width: 100%;\n  max-width: 1024px;\n  margin: 0 auto;\n}\n\nul {\n  list-style-type: none;\n  display: flex;\n  justify-content: space-around;\n}\n\n.menu {\n  height: 10vh;\n}\n\n.menu nav ul li {\n  color: white;\n  text-transform: uppercase;\n}\n\n.menu nav ul li:hover {\n  font-size: 1.3rem;\n}\n\n.menu nav ul a {\n  text-decoration: none;\n}\n\n.name {\n  text-align: center;\n  font-weight: bold;\n  color: white;\n  font-size: 2.5rem;\n  height: 75vh;\n  padding-top: 25vh;\n}\n\n.header {\n  height: 100vh;\n  width: 100vw;\n}\n\n.git_icon {\n  fill: lightgrey;\n}\n\n.git_icon:hover {\n  fill: white;\n}\n\n.linked_icon {\n  fill: lightgrey;\n}\n\n.linked_icon:hover {\n  fill: white;\n  fill-rule: nonzero;\n}\n\n.gmail_icon {\n  fill: lightgrey;\n}\n\n.gmail_icon:hover {\n  fill: white;\n  fill-rule: nonzero;\n}\n\n#icon_position {\n  text-align: center;\n}\n\n.links {\n  height: 10vh;\n}\n\n.footer {\n  height: 5vh;\n  float: right;\n  font-size: 0.8rem;\n  text-align: center;\n}\n\n.about {\n  padding: 0;\n  font-weight: 300;\n}\n\n.icons {\n  text-align: center;\n}\n\n.app {\n  width: 80px;\n  height: 80px;\n  -webkit-transition: all 0.3s;\n  -webkit-transform-origin: 50% 100%;\n  margin-right: 10px;\n  display: inline-block;\n}\n\n.app:hover {\n  -webkit-transform: scale(1.5);\n  margin: 0 1em;\n}\n\n.tech {\n  text-align: center;\n  font-weight: bold;\n  color: white;\n  font-size: 2rem;\n}\n\n.picture {\n  text-align: center;\n}\n\n#picture {\n  border-radius: 50%;\n}\n\n#coder {\n  width: 252px;\n  height: 64px;\n  margin-top: 5vh;\n}", ""]);
 
 // exports
 
 
 /***/ }),
-/* 4 */
+/* 3 */
 /***/ (function(module, exports) {
 
 /*
@@ -205,7 +204,7 @@ function toComment(sourceMap) {
 
 
 /***/ }),
-/* 5 */
+/* 4 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -251,7 +250,7 @@ var singleton = null;
 var	singletonCounter = 0;
 var	stylesInsertedAtTop = [];
 
-var	fixUrls = __webpack_require__(6);
+var	fixUrls = __webpack_require__(5);
 
 module.exports = function(list, options) {
 	if (typeof DEBUG !== "undefined" && DEBUG) {
@@ -564,7 +563,7 @@ function updateLink (link, options, obj) {
 
 
 /***/ }),
-/* 6 */
+/* 5 */
 /***/ (function(module, exports) {
 
 
