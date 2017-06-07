@@ -5,20 +5,39 @@
  }
  body{
      background-repeat: no-repeat;
+     background: #283048;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to bottom, #859398, #283048);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to bottom, #859398, #283048); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+ }
+
+ .main_segment{
+     height: 100vh;
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+    //  border: 1px solid red;
+ }
+ .segment{
+     height: 100vh;
+     display: flex;
+     flex-direction: column;
+     justify-content: space-around;
+    //  border: 1px solid red;
  }
  .container{
    width: 100%;
    max-width: 1024px;
    margin: 0 auto;
+   // border: 1px solid black;
  }
  ul{
      list-style-type: none;
      display: flex;
      justify-content: space-around;
  }
- .menu{
-     height: 10vh
- }
+
  .menu nav ul li{
      color: white;
      text-transform: uppercase;
@@ -35,46 +54,25 @@
     font-weight: bold;
     color: white;
     font-size: 2.5rem;
-    height: 75vh;
-    padding-top: 25vh;
 }
-.header{
-    height: 100vh;
-    width: 100vw;
-}
-.git_icon{
+.icon_effect{
     fill: lightgrey;
 }
-.git_icon:hover{
+.icon_effect:hover{
     fill: white;
 }
 
-.linked_icon{
-    fill: lightgrey;
-
-}
-.linked_icon:hover{
-    fill: white;
-    fill-rule: nonzero;
-}
-
-.gmail_icon{
-    fill: lightgrey;
-
-}
-.gmail_icon:hover{
-    fill: white;
-    fill-rule: nonzero;
-}
 
 #icon_position{
     text-align: center;
 }
-.links{
-    height: 10vh;
+
+.arrow{
+    text-align: center;
 }
+
 .footer{
-    height: 5vh;
+    // height: 5vh;
     float: right;
     font-size: 0.8rem;
     text-align: center;
@@ -120,4 +118,11 @@
     width: 252px;
     height: 64px;
     margin-top: 5vh;
+}
+
+.project{
+    border: 2px solid white;
+    height: 20vh;
+    line-height: 20vh;
+    text-align: center;
 }
