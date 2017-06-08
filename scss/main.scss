@@ -1,6 +1,7 @@
 @import "grid";
 *{
     font-family: 'Raleway', sans-serif;
+    // font-family: 'Roboto Condensed', sans-serif;
     color: white;
  }
  body{
@@ -9,6 +10,9 @@
 background: -webkit-linear-gradient(to bottom, #859398, #283048);  /* Chrome 10-25, Safari 5.1-6 */
 background: linear-gradient(to bottom, #859398, #283048); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
+a{
+    text-decoration: none;
+}
 
  }
 
@@ -42,7 +46,10 @@ background: linear-gradient(to bottom, #859398, #283048); /* W3C, IE 10+/ Edge, 
      color: white;
      text-transform: uppercase;
      &:hover{
-         font-size: 1.3rem;
+         color: black;
+         font-size: 1.1rem;
+         font-weight: bold;
+
      }
  }
 
@@ -106,23 +113,57 @@ background: linear-gradient(to bottom, #859398, #283048); /* W3C, IE 10+/ Edge, 
     color: white;
     font-size: 2rem;
 }
-.picture{
-    text-align: center;
 
-}
-#picture{
-    border-radius: 50%;
-}
-
-#coder{
-    width: 252px;
-    height: 64px;
-    margin-top: 5vh;
-}
 
 .project{
     border: 2px solid white;
     height: 20vh;
     line-height: 20vh;
     text-align: center;
+}
+
+.project:hover{
+    background-color: lightgrey;
+    color: black;
+    transition: 500ms ease-in;
+
+    span{
+        color: black;
+    }
+}
+
+
+// dots animation
+@-webkit-keyframes opacity {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}
+@-moz-keyframes opacity {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+.soon span {
+    -webkit-animation-name: opacity;
+    -webkit-animation-duration: 3s;
+    -webkit-animation-iteration-count: infinite;
+
+    -moz-animation-name: opacity;
+    -moz-animation-duration: 3s;
+    -moz-animation-iteration-count: infinite;
+}
+
+.soon span:nth-child(1) {
+    -webkit-animation-delay: 500ms;
+    -moz-animation-delay: 500ms;
+}
+
+.soon span:nth-child(2) {
+    -webkit-animation-delay: 1500ms;
+    -moz-animation-delay: 1500ms;
+}
+
+.soon span:nth-child(3) {
+    -webkit-animation-delay: 2500ms;
+    -moz-animation-delay: 2500ms;
 }
