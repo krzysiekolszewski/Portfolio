@@ -108,7 +108,7 @@ __webpack_require__(0);
 $(document).ready(function () {
 
     //scroll down animation
-    $('.arrow > a').click(function () {
+    $('.arrow > a, .menu > nav > ul > a').click(function () {
         $('html, body').animate({
             scrollTop: $($(this).attr('href')).offset().top
         }, 1000);
