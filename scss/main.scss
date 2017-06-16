@@ -227,22 +227,26 @@ a{
 
 }
 
+#over_title{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 5rem;
+    color: red;
+    font-weight: bold;
+}
 #over_text {
     text-align: center;
     font-size: 2rem;
 }
-
-#close:hover{
+#close {
     background-color: black;
+    border: none;
     color: white;
-    transition: 500ms ease-in;
+}
 
-    span{
-        display: block;
-    }
-
-    p{
-        display: none;
-    }
-
+.scroll{
+    display: none;
+    position: fixed;
+    bottom: 1vh;
+    right: 5vw;
 }

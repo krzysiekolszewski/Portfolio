@@ -106,41 +106,44 @@ if(false) {
 
 __webpack_require__(0);
 $(document).ready(function () {
-  // Adding effect to all links
-  $("a").on('click', function (event) {
 
-    // Make sure this.hash has a value before overriding default behavior
-    if (this.hash !== "") {
-      // Prevent default anchor click behavior
-      event.preventDefault();
+    //scroll down animation
+    $('.arrow > a').click(function () {
+        $('html, body').animate({
+            scrollTop: $($(this).attr('href')).offset().top
+        }, 1000);
+        return false;
+    });
+    //scroll up animation
+    $('#scroll_top').click(function () {
+        $('html,body').animate({
+            scrollTop: 0
+        }, 1000);
+        return false;
+    });
 
-      // Store hash
-      var hash = this.hash;
+    $('.game').on('click', function () {
+        $('.overlay').css('display', 'inline-block');
+        $('#over_title').text("Pac-game");
+        $('#over_text').text("Gra Pac-game opiera się na prostym silniku stworzonym w JavaScript. Gra polega na sterowaniu obiektem za pomocą strzałek i zbieraniu truskawek oraz bonusowych ciastek. Gra kończy się w momencie, gdy Pac uderzy w ścianę.");
+        $('#code').attr('href', 'https://github.com/krzysiekolszewski/pac-game');
+        $('#live').attr('href', 'https://krzysiekolszewski.github.io/pac-game');
+        $('#close').on('click', function () {
+            $('.overlay').css('display', 'none');
+        });
+    });
 
-      // Using jQuery's animate() method to add smooth page scroll
-      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-      $('html, body').animate({
-        scrollTop: $(hash).offset().top
-      }, 1000, function () {
+    //esc key closes overlay
+    $(document).keyup(function (e) {
+        if (e.keyCode == 27) {
+            document.querySelector(".overlay").style.display = 'none';
+        }
+    });
 
-        // Add hash (#) to URL when done scrolling (default click behavior)
-        window.location.hash = hash;
-      });
-    } // End if
-  });
-
-  var game = document.querySelector(".game");
-  game.onclick = function () {
-    document.querySelector('.overlay').style.display = 'block';
-    document.querySelector('#over_text').innerText = " Gra Pac-game opiera się na prostym silniku stworzonym w JavaScript. Gra polega na sterowaniu obiektem za pomocą strzałek i zbieraniu truskawek oraz bonusowych ciastek. Gra kończy się w momencie, gdy Pac uderzy w ścianę. \n \n Punkt bonusowy pojawia się losowo, po pewnym okresie czasu";
-    document.querySelector('#code').href = 'https://github.com/krzysiekolszewski/pac-game';
-    document.querySelector('#live').href = 'https://krzysiekolszewski.github.io/pac-game';
-
-    var close = document.getElementById('close');
-    close.onclick = function () {
-      document.querySelector(".overlay").style.display = 'none';
-    };
-  };
+    // after scroll show scroll top icon
+    $(window).scroll(function () {
+        $('.scroll').css('display', 'inline-block');
+    });
 });
 
 /***/ }),
@@ -152,7 +155,7 @@ exports = module.exports = __webpack_require__(3)(undefined);
 
 
 // module
-exports.push([module.i, ".row:before,\n.row:after {\n  content: \"\";\n  display: table;\n  clear: both;\n}\n\n.grid {\n  width: 100%;\n  max-width: 70rem;\n}\n\n* {\n  box-sizing: border-box;\n}\n\n[class*=\"col-\"] {\n  float: left;\n  min-height: 1px;\n  width: 100%;\n  padding: 0.5rem;\n}\n\n@media (min-width: 20rem) {\n  .col-1 {\n    width: 8.33333%;\n  }\n\n  .col-2 {\n    width: 16.66667%;\n  }\n\n  .col-3 {\n    width: 25%;\n  }\n\n  .col-4 {\n    width: 33.33333%;\n  }\n\n  .col-5 {\n    width: 41.66667%;\n  }\n\n  .col-6 {\n    width: 50%;\n  }\n\n  .col-7 {\n    width: 58.33333%;\n  }\n\n  .col-8 {\n    width: 66.66667%;\n  }\n\n  .col-9 {\n    width: 75%;\n  }\n\n  .col-10 {\n    width: 83.33333%;\n  }\n\n  .col-11 {\n    width: 91.66667%;\n  }\n\n  .col-12 {\n    width: 100%;\n  }\n}\n\n.col-1 {\n  width: 8.33333%;\n}\n\n.col-2 {\n  width: 16.66667%;\n}\n\n.col-3 {\n  width: 25%;\n}\n\n.col-4 {\n  width: 33.33333%;\n}\n\n.col-5 {\n  width: 41.66667%;\n}\n\n.col-6 {\n  width: 50%;\n}\n\n.col-7 {\n  width: 58.33333%;\n}\n\n.col-8 {\n  width: 66.66667%;\n}\n\n.col-9 {\n  width: 75%;\n}\n\n.col-10 {\n  width: 83.33333%;\n}\n\n.col-11 {\n  width: 91.66667%;\n}\n\n.col-12 {\n  width: 100%;\n}\n\n* {\n  font-family: 'Raleway', sans-serif;\n  color: white;\n}\n\nbody {\n  background-repeat: no-repeat;\n  background: #283048;\n  /* fallback for old browsers */\n  background: -webkit-linear-gradient(to bottom, #859398, #283048);\n  /* Chrome 10-25, Safari 5.1-6 */\n  background: linear-gradient(to bottom, #859398, #283048);\n  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */\n}\n\nbody a {\n  text-decoration: none;\n}\n\n.main_segment {\n  height: 100vh;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n}\n\n.segment {\n  height: 100vh;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-around;\n}\n\n.container {\n  width: 100%;\n  max-width: 1024px;\n  margin: 0 auto;\n}\n\nul {\n  list-style-type: none;\n  display: flex;\n  justify-content: space-around;\n}\n\n.menu nav ul li {\n  color: white;\n  text-transform: uppercase;\n}\n\n.menu nav ul li:hover {\n  color: black;\n  font-size: 1.1rem;\n  font-weight: bold;\n}\n\n.menu nav ul a {\n  text-decoration: none;\n}\n\n.name {\n  text-align: center;\n  font-weight: bold;\n  color: white;\n  font-size: 2.5rem;\n}\n\n.icon_effect {\n  fill: lightgrey;\n}\n\n.icon_effect:hover {\n  fill: white;\n}\n\n#icon_position {\n  text-align: center;\n}\n\n.arrow {\n  text-align: center;\n}\n\n.footer {\n  float: right;\n  font-size: 0.8rem;\n  text-align: center;\n}\n\n.about {\n  padding: 0;\n  font-weight: 300;\n}\n\n.icons {\n  text-align: center;\n}\n\n.app {\n  width: 80px;\n  height: 80px;\n  -webkit-transition: all 0.3s;\n  -webkit-transform-origin: 50% 100%;\n  margin-right: 10px;\n  display: inline-block;\n}\n\n.app:hover {\n  -webkit-transform: scale(1.5);\n  margin: 0 1em;\n}\n\n.tech {\n  text-align: center;\n  font-weight: bold;\n  color: white;\n  font-size: 2rem;\n}\n\n.project {\n  border: 2px solid white;\n  height: 20vh;\n  line-height: 20vh;\n  text-align: center;\n}\n\n.project:hover {\n  background-color: lightgrey;\n  color: black;\n  transition: 500ms ease-in;\n}\n\n.project:hover span {\n  color: black;\n}\n\n@-webkit-keyframes opacity {\n  0% {\n    opacity: 1;\n  }\n\n  100% {\n    opacity: 0;\n  }\n}\n\n@-moz-keyframes opacity {\n  0% {\n    opacity: 1;\n  }\n\n  100% {\n    opacity: 0;\n  }\n}\n\n.soon span {\n  -webkit-animation-name: opacity;\n  -webkit-animation-duration: 3s;\n  -webkit-animation-iteration-count: infinite;\n  -moz-animation-name: opacity;\n  -moz-animation-duration: 3s;\n  -moz-animation-iteration-count: infinite;\n}\n\n.soon span:nth-child(1) {\n  -webkit-animation-delay: 500ms;\n  -moz-animation-delay: 500ms;\n}\n\n.soon span:nth-child(2) {\n  -webkit-animation-delay: 1500ms;\n  -moz-animation-delay: 1500ms;\n}\n\n.soon span:nth-child(3) {\n  -webkit-animation-delay: 2500ms;\n  -moz-animation-delay: 2500ms;\n}\n\n.overlay > .container {\n  display: flex;\n  flex-direction: column;\n}\n\n.overlay {\n  position: fixed;\n  display: none;\n  top: 0;\n  left: 0;\n  width: 100vw;\n  height: 100vh;\n  background-color: #000;\n  filter: alpha(opacity=90);\n  -moz-opacity: 0.9;\n  -khtml-opacity: 0.9;\n  opacity: 0.9;\n  z-index: 10000;\n}\n\n.over_btn {\n  color: black;\n  width: 100%;\n  height: 5vh;\n  font-size: 1.5rem;\n}\n\n.buttons {\n  display: flex;\n  justify-content: space-around;\n}\n\n#github_link {\n  height: 10vh;\n  width: 30vw;\n  font-size: 2rem;\n}\n\n#github_link p {\n  color: black;\n}\n\n#github_link span {\n  display: none;\n}\n\n#github_link:hover {\n  background-color: black;\n  color: white;\n  transition: 500ms ease-in;\n}\n\n#github_link:hover span {\n  display: block;\n}\n\n#github_link:hover p {\n  display: none;\n}\n\n#over_text {\n  text-align: center;\n  font-size: 2rem;\n}\n\n#close:hover {\n  background-color: black;\n  color: white;\n  transition: 500ms ease-in;\n}\n\n#close:hover span {\n  display: block;\n}\n\n#close:hover p {\n  display: none;\n}", ""]);
+exports.push([module.i, ".row:before,\n.row:after {\n  content: \"\";\n  display: table;\n  clear: both;\n}\n\n.grid {\n  width: 100%;\n  max-width: 70rem;\n}\n\n* {\n  box-sizing: border-box;\n}\n\n[class*=\"col-\"] {\n  float: left;\n  min-height: 1px;\n  width: 100%;\n  padding: 0.5rem;\n}\n\n@media (min-width: 20rem) {\n  .col-1 {\n    width: 8.33333%;\n  }\n\n  .col-2 {\n    width: 16.66667%;\n  }\n\n  .col-3 {\n    width: 25%;\n  }\n\n  .col-4 {\n    width: 33.33333%;\n  }\n\n  .col-5 {\n    width: 41.66667%;\n  }\n\n  .col-6 {\n    width: 50%;\n  }\n\n  .col-7 {\n    width: 58.33333%;\n  }\n\n  .col-8 {\n    width: 66.66667%;\n  }\n\n  .col-9 {\n    width: 75%;\n  }\n\n  .col-10 {\n    width: 83.33333%;\n  }\n\n  .col-11 {\n    width: 91.66667%;\n  }\n\n  .col-12 {\n    width: 100%;\n  }\n}\n\n.col-1 {\n  width: 8.33333%;\n}\n\n.col-2 {\n  width: 16.66667%;\n}\n\n.col-3 {\n  width: 25%;\n}\n\n.col-4 {\n  width: 33.33333%;\n}\n\n.col-5 {\n  width: 41.66667%;\n}\n\n.col-6 {\n  width: 50%;\n}\n\n.col-7 {\n  width: 58.33333%;\n}\n\n.col-8 {\n  width: 66.66667%;\n}\n\n.col-9 {\n  width: 75%;\n}\n\n.col-10 {\n  width: 83.33333%;\n}\n\n.col-11 {\n  width: 91.66667%;\n}\n\n.col-12 {\n  width: 100%;\n}\n\n* {\n  font-family: 'Raleway', sans-serif;\n  color: white;\n}\n\nbody {\n  background-repeat: no-repeat;\n  background: #283048;\n  /* fallback for old browsers */\n  background: -webkit-linear-gradient(to bottom, #859398, #283048);\n  /* Chrome 10-25, Safari 5.1-6 */\n  background: linear-gradient(to bottom, #859398, #283048);\n  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */\n}\n\nbody a {\n  text-decoration: none;\n}\n\n.main_segment {\n  height: 100vh;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n}\n\n.segment {\n  height: 100vh;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-around;\n}\n\n.container {\n  width: 100%;\n  max-width: 1024px;\n  margin: 0 auto;\n}\n\nul {\n  list-style-type: none;\n  display: flex;\n  justify-content: space-around;\n}\n\n.menu nav ul li {\n  color: white;\n  text-transform: uppercase;\n}\n\n.menu nav ul li:hover {\n  color: black;\n  font-size: 1.1rem;\n  font-weight: bold;\n}\n\n.menu nav ul a {\n  text-decoration: none;\n}\n\n.name {\n  text-align: center;\n  font-weight: bold;\n  color: white;\n  font-size: 2.5rem;\n}\n\n.icon_effect {\n  fill: lightgrey;\n}\n\n.icon_effect:hover {\n  fill: white;\n}\n\n#icon_position {\n  text-align: center;\n}\n\n.arrow {\n  text-align: center;\n}\n\n.footer {\n  float: right;\n  font-size: 0.8rem;\n  text-align: center;\n}\n\n.about {\n  padding: 0;\n  font-weight: 300;\n}\n\n.icons {\n  text-align: center;\n}\n\n.app {\n  width: 80px;\n  height: 80px;\n  -webkit-transition: all 0.3s;\n  -webkit-transform-origin: 50% 100%;\n  margin-right: 10px;\n  display: inline-block;\n}\n\n.app:hover {\n  -webkit-transform: scale(1.5);\n  margin: 0 1em;\n}\n\n.tech {\n  text-align: center;\n  font-weight: bold;\n  color: white;\n  font-size: 2rem;\n}\n\n.project {\n  border: 2px solid white;\n  height: 20vh;\n  line-height: 20vh;\n  text-align: center;\n}\n\n.project:hover {\n  background-color: lightgrey;\n  color: black;\n  transition: 500ms ease-in;\n}\n\n.project:hover span {\n  color: black;\n}\n\n@-webkit-keyframes opacity {\n  0% {\n    opacity: 1;\n  }\n\n  100% {\n    opacity: 0;\n  }\n}\n\n@-moz-keyframes opacity {\n  0% {\n    opacity: 1;\n  }\n\n  100% {\n    opacity: 0;\n  }\n}\n\n.soon span {\n  -webkit-animation-name: opacity;\n  -webkit-animation-duration: 3s;\n  -webkit-animation-iteration-count: infinite;\n  -moz-animation-name: opacity;\n  -moz-animation-duration: 3s;\n  -moz-animation-iteration-count: infinite;\n}\n\n.soon span:nth-child(1) {\n  -webkit-animation-delay: 500ms;\n  -moz-animation-delay: 500ms;\n}\n\n.soon span:nth-child(2) {\n  -webkit-animation-delay: 1500ms;\n  -moz-animation-delay: 1500ms;\n}\n\n.soon span:nth-child(3) {\n  -webkit-animation-delay: 2500ms;\n  -moz-animation-delay: 2500ms;\n}\n\n.overlay > .container {\n  display: flex;\n  flex-direction: column;\n}\n\n.overlay {\n  position: fixed;\n  display: none;\n  top: 0;\n  left: 0;\n  width: 100vw;\n  height: 100vh;\n  background-color: #000;\n  filter: alpha(opacity=90);\n  -moz-opacity: 0.9;\n  -khtml-opacity: 0.9;\n  opacity: 0.9;\n  z-index: 10000;\n}\n\n.over_btn {\n  color: black;\n  width: 100%;\n  height: 5vh;\n  font-size: 1.5rem;\n}\n\n.buttons {\n  display: flex;\n  justify-content: space-around;\n}\n\n#github_link {\n  height: 10vh;\n  width: 30vw;\n  font-size: 2rem;\n}\n\n#github_link p {\n  color: black;\n}\n\n#github_link span {\n  display: none;\n}\n\n#github_link:hover {\n  background-color: black;\n  color: white;\n  transition: 500ms ease-in;\n}\n\n#github_link:hover span {\n  display: block;\n}\n\n#github_link:hover p {\n  display: none;\n}\n\n#over_title {\n  text-align: center;\n  text-transform: uppercase;\n  font-size: 5rem;\n  color: red;\n  font-weight: bold;\n}\n\n#over_text {\n  text-align: center;\n  font-size: 2rem;\n}\n\n#close {\n  background-color: black;\n  border: none;\n  color: white;\n}\n\n.scroll {\n  display: none;\n  position: fixed;\n  bottom: 1vh;\n  right: 5vw;\n}", ""]);
 
 // exports
 
