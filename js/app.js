@@ -25,12 +25,14 @@ require('../scss/main.scss');
 
       var game = document.querySelector(".game")
           game.onclick = function() {
-              var overlay = jQuery('<div class="overlay"><button id="close">ZAMKNIJ</button><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></div>');
-              overlay.appendTo(document.body);
+              document.querySelector('.overlay').style.display = ('block');
+              document.querySelector('#over_text').innerText = (" Gra Pac-game opiera się na prostym silniku stworzonym w JavaScript. Gra polega na sterowaniu obiektem za pomocą strzałek i zbieraniu truskawek oraz bonusowych ciastek. Gra kończy się w momencie, gdy Pac uderzy w ścianę. \n \n Punkt bonusowy pojawia się losowo, po pewnym okresie czasu");
+              document.querySelector('#code').href=('https://github.com/krzysiekolszewski/Pac-game');
+              document.querySelector('#live').href=('https://krzysiekolszewski.github.io/Pac-game');
 
               var close = document.getElementById('close')
               close.onclick = function() {
-                 document.querySelector(".overlay").parentNode.removeChild(document.querySelector(".overlay"))
+                 document.querySelector(".overlay").style.display = ('none')
               }
           }
 
