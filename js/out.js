@@ -133,8 +133,8 @@ $(document).ready(function () {
   game.onclick = function () {
     document.querySelector('.overlay').style.display = 'block';
     document.querySelector('#over_text').innerText = " Gra Pac-game opiera się na prostym silniku stworzonym w JavaScript. Gra polega na sterowaniu obiektem za pomocą strzałek i zbieraniu truskawek oraz bonusowych ciastek. Gra kończy się w momencie, gdy Pac uderzy w ścianę. \n \n Punkt bonusowy pojawia się losowo, po pewnym okresie czasu";
-    document.querySelector('#code').href = 'https://github.com/krzysiekolszewski/Pac-game';
-    document.querySelector('#live').href = 'https://krzysiekolszewski.github.io/Pac-game';
+    document.querySelector('#code').href = 'https://github.com/krzysiekolszewski/pac-game';
+    document.querySelector('#live').href = 'https://krzysiekolszewski.github.io/pac-game';
 
     var close = document.getElementById('close');
     close.onclick = function () {
