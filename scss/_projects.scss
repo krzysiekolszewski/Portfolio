@@ -1,0 +1,87 @@
+.project {
+    border: 2px solid white;
+    height: 15vh;
+    line-height: 15vh;
+    text-align: center;
+    width: 40vw;
+    font-size: 3rem;
+    @include desktop{
+        border: 2px solid white;
+        width: auto;
+        height: 20vh;
+        line-height: 20vh;
+        font-size: 1rem;
+    };
+}
+
+.project:hover {
+    @include desktop{
+    background-color: lightgrey;
+    color: black;
+    transition: 500ms ease-in;
+
+    span {
+        color: black;
+    }
+    };
+}
+
+
+@-webkit-keyframes opacity {
+    0% {opacity: 1}
+    100% {opacity: 0}
+}
+@-moz-keyframes opacity {
+    0% {opacity: 1}
+    100% {opacity: 0}
+}
+
+.soon span {
+    -webkit-animation-name: opacity;
+    -webkit-animation-duration: 3s;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-name: opacity;
+    -moz-animation-duration: 3s;
+    -moz-animation-iteration-count: infinite;
+}
+
+.soon span:nth-child(1) {
+    -webkit-animation-delay: 500ms;
+    -moz-animation-delay: 500ms;
+}
+
+.soon span:nth-child(2) {
+    -webkit-animation-delay: 1500ms;
+    -moz-animation-delay: 1500ms;
+}
+
+.soon span:nth-child(3) {
+    -webkit-animation-delay: 2500ms;
+    -moz-animation-delay: 2500ms;
+}
+
+.projects{
+    display: flex;
+    justify-content: center;
+    @include desktop{
+        flex-direction: column;
+    };
+}
+
+#pro_1{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    @include desktop{
+        flex-direction: row;
+    };
+}
+
+.pro{
+    text-align: center;
+    font-size: 4rem;
+    @include desktop{
+        font-size: 1.5rem;
+    };
+
+}

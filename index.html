@@ -6,22 +6,20 @@
     <title>Krzysztof Olszewski</title>
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
-
-
-    <!-- style="background-image: url('images/background_main.jpg')" -->
     <div class='container' id="main">
         <div class="main_segment">
             <div class='row'>
                 <div class='col-12 menu'>
                     <nav>
                         <ul>
-                            <a id="scroll_down" href="index.html">
+                            <a href="index.html">
                                 <li>Strona główna</li>
                             </a>
-                            <a id="scroll_down" href="#about">
+                            <a href="#about">
                                 <li>O mnie</li>
                             </a>
                             <a href="#projects">
@@ -31,7 +29,9 @@
                                 <li>Kontakt</li>
                             </a>
 
+
                         </ul>
+                        <i class="fa fa-bars" aria-hidden="true"></i>
                     </nav>
 
                 </div>
@@ -76,15 +76,16 @@
         <div class="segment" id="about">
 
             <div class="row">
-                <div class="col-4">
-                    photo
+                <div class='col-12 me'>
+                    <h1>O mnie:</h1>
                 </div>
-
-                <div class="col-8">
-                    <p>Naukę programowania rozpocząłem w szkole Coder's Lab, podczas intensywnego kursu realizowanego w formie bootcampu - dzięki 240 godzinom zajęć oraz ciężkiej pracy po zajęciach okryłem, że programowanie jest czymś, czym chciałbym zająć
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <p id="text_1">Naukę programowania rozpocząłem w szkole Coder's Lab, podczas intensywnego kursu realizowanego w formie bootcampu - dzięki 240 godzinom zajęć oraz ciężkiej pracy po zajęciach okryłem, że programowanie jest czymś, czym chciałbym zająć
                         się zawowodo.</p>
                     <br>
-                    <p>To, co najbardziej cenię w tym zawodzie to brak monotonii oraz ogrom nowych wyzwań. Szukam firmy, która pozwoli mi doskonalić swoje umiejętności oraz pozwoli mi stać się częścią zgranego zespołu.
+                    <p id="text_2">To, co najbardziej cenię w tym zawodzie to brak monotonii oraz ogrom nowych wyzwań. Szukam firmy, która pozwoli mi doskonalić swoje umiejętności oraz pozwoli mi stać się częścią zgranego zespołu.
                         <p>
                 </div>
             </div>
@@ -127,64 +128,65 @@
         <div class="segment" id="projects">
 
             <div class='row'>
-                <div class='col-12 tech'>
+                <div class='col-12 pro'>
                     <h1>Moje projekty:</h1>
                 </div>
             </div>
 
-            <section>
+            <section class="projects">
+                        <div class='row' id="pro_1">
+                            <div class='col-4'>
+                                <div class="project game">
+                                    pac-game.
+                                </div>
+                            </div>
 
-                <div class='row'>
-                    <div class='col-4'>
-                        <div class="project game">
-                            pac-game.
+                            <div class='col-4'>
+                                <a href="#">
+                                    <div class="project">
+                                        website.
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class='col-4'>
+                                <a href="#">
+                                    <div class="project">
+                                        music launchpad
+                                    </div>
+                                </a>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class='col-4'>
-                        <a href="#">
-                            <div class="project">
-                                website.
+                        <div class='row' id="pro_1">
+                            <div class='col-4'>
+                                <a href="#">
+                                    <div class="project">
+                                        wheather app
+                                    </div>
+                                </a>
                             </div>
-                        </a>
-                    </div>
 
-                    <div class='col-4'>
-                        <a href="#">
-                            <div class="project">
-                                music launchpad
+                            <div class='col-4'>
+                                <div class="project soon">
+                                    soon
+                                    <span>.</span>
+                                    <span>.</span>
+                                    <span>.</span>
+                                </div>
                             </div>
-                        </a>
-                    </div>
+
+                            <div class='col-4'>
+                                <div class="project soon">
+                                    soon
+                                    <span>.</span>
+                                    <span>.</span>
+                                    <span>.</span>
+                                </div>
+                            </div>
+
                 </div>
 
-                <div class='row'>
-                    <div class='col-4'>
-                        <a href="#">
-                            <div class="project">
-                                wheather app
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class='col-4'>
-                        <div class="project soon">
-                            soon
-                            <span>.</span>
-                            <span>.</span>
-                            <span>.</span>
-                        </div>
-                    </div>
-
-                    <div class='col-4'>
-                        <div class="project soon">
-                            soon
-                            <span>.</span>
-                            <span>.</span>
-                            <span>.</span>
-                        </div>
-                    </div>
-                </div>
             </section>
 
             <div class="row">
@@ -203,22 +205,22 @@
 
         <div class="main_segment" id="contact">
             <div class="row">
-                <div class="col-12 tech">
+                <div class="col-12 pro">
                     <h1>Kontakt:</h1>
                 </div>
             </div>
 
 
-            <div class="row links">
-                <div class="col-6" id="icon_position">
-                    <a href="#"><svg fill="#FFFFFF" height="80" viewBox="0 0 24 24" width="80" xmlns="http://www.w3.org/2000/svg">
+            <div class="row contact">
+                <div class="col-2" id="icon_position">
+                    <a href="https://cv.interviewme.pl/krzysztof-olszewski" target="_blank"><svg fill="#FFFFFF" height="80" viewBox="0 0 24 24" width="80" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z" class="icon_effect"/>
                                 <path d="M0 0h24v24H0z" fill="none"/></svg></a>
                     <br>
                     <p>CV</p>
                 </div>
 
-                <div class="col-6" id="icon_position">
+                <div class="col-2" id="icon_position">
                     <a href="tel:604-945-940"><svg fill="#FFFFFF" height="80" viewBox="0 0 24 24" width="80" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" class="icon_effect"/>
                                 <path d="M0 0h24v24H0z" fill="none"/>
@@ -227,24 +229,22 @@
                     <p>+48 604 945 940</p>
                     </svg>
                 </div>
-            </div>
 
-            <div class='row links'>
-                <div class='col-4' id="icon_position">
+                <div class='col-2' id="icon_position">
 
-                    <a href="https://github.com/krzysiekolszewski"><svg width="64" height="64" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><path d="M8 0C3.58 0 0 3.582 0 8c0 3.535 2.292 6.533 5.47 7.59.4.075.547-.172.547-.385 0-.19-.007-.693-.01-1.36-2.226.483-2.695-1.073-2.695-1.073-.364-.924-.89-1.17-.89-1.17-.725-.496.056-.486.056-.486.803.056 1.225.824 1.225.824.714 1.223 1.873.87 2.33.665.072-.517.278-.87.507-1.07-1.777-.2-3.644-.888-3.644-3.953 0-.873.31-1.587.823-2.147-.09-.202-.36-1.015.07-2.117 0 0 .67-.215 2.2.82.64-.178 1.32-.266 2-.27.68.004 1.36.092 2 .27 1.52-1.035 2.19-.82 2.19-.82.43 1.102.16 1.915.08 2.117.51.56.82 1.274.82 2.147 0 3.073-1.87 3.75-3.65 3.947.28.24.54.73.54 1.48 0 1.07-.01 1.93-.01 2.19 0 .21.14.46.55.38C13.71 14.53 16 11.53 16 8c0-4.418-3.582-8-8-8" class="icon_effect"/></svg></a>
+                    <a href="https://github.com/krzysiekolszewski" target="_blank"><svg width="64" height="64" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><path d="M8 0C3.58 0 0 3.582 0 8c0 3.535 2.292 6.533 5.47 7.59.4.075.547-.172.547-.385 0-.19-.007-.693-.01-1.36-2.226.483-2.695-1.073-2.695-1.073-.364-.924-.89-1.17-.89-1.17-.725-.496.056-.486.056-.486.803.056 1.225.824 1.225.824.714 1.223 1.873.87 2.33.665.072-.517.278-.87.507-1.07-1.777-.2-3.644-.888-3.644-3.953 0-.873.31-1.587.823-2.147-.09-.202-.36-1.015.07-2.117 0 0 .67-.215 2.2.82.64-.178 1.32-.266 2-.27.68.004 1.36.092 2 .27 1.52-1.035 2.19-.82 2.19-.82.43 1.102.16 1.915.08 2.117.51.56.82 1.274.82 2.147 0 3.073-1.87 3.75-3.65 3.947.28.24.54.73.54 1.48 0 1.07-.01 1.93-.01 2.19 0 .21.14.46.55.38C13.71 14.53 16 11.53 16 8c0-4.418-3.582-8-8-8" class="icon_effect"/></svg></a>
                     <br>
                     <p>github.com/krzysiekolszewski</p>
                 </div>
-                <div class='col-4' id="icon_position">
-                    <a id="linked" href="https://www.linkedin.com/in/krzysztof-olszewski"><svg width="64" height="64" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><path d="M13.632 13.635h-2.37V9.922c0-.886-.018-2.025-1.234-2.025-1.235 0-1.424.964-1.424 1.96v3.778h-2.37V6H8.51v1.04h.03c.318-.6 1.092-1.233 2.247-1.233 2.4 0 2.845 1.58 2.845 3.637v4.188zM3.558 4.955c-.762 0-1.376-.617-1.376-1.377 0-.758.614-1.375 1.376-1.375.76 0 1.376.617 1.376 1.375 0 .76-.617 1.377-1.376 1.377zm1.188 8.68H2.37V6h2.376v7.635zM14.816 0H1.18C.528 0 0 .516 0 1.153v13.694C0 15.484.528 16 1.18 16h13.635c.652 0 1.185-.516 1.185-1.153V1.153C16 .516 15.467 0 14.815 0z" class='icon_effect' fill-rule="nonzero"/></svg></a>
+                <div class='col-2' id="icon_position">
+                    <a id="linked" href="https://www.linkedin.com/in/krzysztof-olszewski" target="_blank"><svg width="64" height="64" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><path d="M13.632 13.635h-2.37V9.922c0-.886-.018-2.025-1.234-2.025-1.235 0-1.424.964-1.424 1.96v3.778h-2.37V6H8.51v1.04h.03c.318-.6 1.092-1.233 2.247-1.233 2.4 0 2.845 1.58 2.845 3.637v4.188zM3.558 4.955c-.762 0-1.376-.617-1.376-1.377 0-.758.614-1.375 1.376-1.375.76 0 1.376.617 1.376 1.375 0 .76-.617 1.377-1.376 1.377zm1.188 8.68H2.37V6h2.376v7.635zM14.816 0H1.18C.528 0 0 .516 0 1.153v13.694C0 15.484.528 16 1.18 16h13.635c.652 0 1.185-.516 1.185-1.153V1.153C16 .516 15.467 0 14.815 0z" class='icon_effect' fill-rule="nonzero"/></svg></a>
                     <br>
-                    <p>linkedin.com/krzysztof-olszewski</p>
+                    <p>linkedin.com/in/krzysztof-olszewski</p>
 
                 </div>
 
 
-                <div class='col-4' id="icon_position">
+                <div class='col-2' id="icon_position">
                     <a id="mail" href="mailto:krzols95@gmail.com"><svg width="64" height="64" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M16 3v10c0 .567-.433 1-1 1h-1V4.925L8 9.233 2 4.925V14H1c-.567 0-1-.433-1-1V3c0-.283.108-.533.287-.712C.467 2.107.718 2 1 2h.333L8 6.833 14.667 2H15c.283 0 .533.108.713.288.179.179.287.429.287.712z" class='icon_effect' fill-rule="evenodd"/></svg></a>
                     <br>
                     <p>krzols95@gmail.com</p>
@@ -259,7 +259,7 @@
             </div>
         </div>
         <div class="scroll">
-            <a href="index.html" id="scroll_top"><svg fill="#FFFFFF" xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24"><path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/></svg></a>
+            <a href="index.html" id="scrollToTop"><svg fill="#FFFFFF" xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24"><path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/></svg></a>
         </div>
     </div>
     <div class="overlay">
@@ -283,6 +283,25 @@
                     </a>
             </div>
 
+        </div>
+    </div>
+
+    <div class="mobile_menu">
+        <i class="fa fa-times" aria-hidden="true"></i>
+        <div class="container">
+
+            <a href="index.html">
+                Strona główna
+            </a>
+            <a href="#about">
+                O mnie
+            </a>
+            <a href="#projects">
+                Moje projekty
+            </a>
+            <a href="#contact">
+                Kontakt
+            </a>
         </div>
     </div>
 

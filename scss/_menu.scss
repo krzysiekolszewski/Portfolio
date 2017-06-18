@@ -1,0 +1,74 @@
+
+.menu nav ul li {
+    color: white;
+    text-transform: uppercase;
+    @include desktop{
+        &:hover {
+            color: black;
+            font-size: 1.1rem;
+            font-weight: bold;
+        }
+    };
+
+}
+
+.menu nav ul a {
+    text-decoration: none;
+}
+nav{
+    font-size: 3rem;
+    @include desktop{
+        font-size: 1rem;
+    };
+    ul{
+        display: none;
+        @include desktop{
+            list-style-type: none;
+            display: flex;
+            justify-content: space-around;
+        };
+    }
+    .fa-bars{
+        float: right;
+        position: fixed;
+        font-size: 5rem;
+        top: 50px;
+        right: 50px;
+        @include desktop{
+            display: none;
+        };
+    }
+}
+
+.mobile_menu{
+    position: fixed;
+    display: none;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+    filter:alpha(opacity=90);
+    -moz-opacity: 0.9;
+    -khtml-opacity: 0.9;
+    opacity: 0.9;
+
+    .fa-times{
+        font-size: 5rem;
+        position: fixed;
+        top: 50px;
+        right: 50px;
+    }
+    .container{
+        display: flex;
+        flex-direction: column;
+        padding-top: 10vh;
+    }
+    .container a {
+        font-size: 3rem;
+        text-transform: uppercase;
+        text-align: center;
+        border: 1px solid white;
+        padding: 5rem;
+    }
+}

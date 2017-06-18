@@ -1,0 +1,79 @@
+//overlay
+.overlay > .container {
+    display: flex;
+    flex-direction: column;
+}
+
+.overlay {
+    position: fixed;
+    display: none;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+    filter:alpha(opacity=90);
+    -moz-opacity: 0.9;
+    -khtml-opacity: 0.9;
+    opacity: 0.9;
+    z-index: 10000;
+}
+
+.over_btn {
+    color: black;
+    width: 100%;
+    height: 5vh;
+    font-size: 1.5rem;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-around;
+}
+
+#github_link {
+    height: 10vh;
+    width: 30vw;
+    font-size: 2rem;
+
+    p {
+        color: black;
+    }
+
+    span {
+        display: none;
+    }
+}
+
+#github_link:hover {
+    background-color: black;
+    color: white;
+    transition: 500ms ease-in;
+
+    span {
+        display: block;
+    }
+
+    p {
+        display: none;
+    }
+}
+
+#over_title {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 5rem;
+    color: red;
+    font-weight: bold;
+}
+
+#over_text {
+    text-align: center;
+    font-size: 2rem;
+}
+
+#close {
+    background-color: black;
+    border: none;
+    color: white;
+}

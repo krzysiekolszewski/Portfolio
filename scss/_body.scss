@@ -1,0 +1,48 @@
+* {
+    font-family: 'Raleway', sans-serif;
+    // font-family: 'Roboto Condensed', sans-serif;
+    color: white;
+}
+
+body {
+    background-repeat: no-repeat;
+    background: #283048;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #859398, #283048);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #859398, #283048);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    a {
+        text-decoration: none;
+    }
+}
+
+.main_segment {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    //  border: 1px solid red;
+}
+
+.segment {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    //  border: 1px solid red;
+}
+
+.container {
+    width: 100%;
+    max-width: 1024px;
+    margin: 0 auto;
+    // border: 1px solid black;
+}
+
+.scroll {
+    display: none;
+    position: fixed;
+    bottom: 1vh;
+    right: 5vw;
+}

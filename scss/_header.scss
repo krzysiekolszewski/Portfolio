@@ -1,0 +1,32 @@
+.name {
+    text-align: center;
+    font-size: 4rem;
+    @include desktop{
+    font-size: 2.5rem;
+    };
+}
+
+.links{
+    display: none;
+    @include desktop{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    };
+}
+
+.icon_effect {
+    fill: lightgrey;
+}
+
+.icon_effect:hover {
+    fill: white;
+}
+
+#icon_position {
+    text-align: center;
+}
+
+.arrow {
+    text-align: center;
+}

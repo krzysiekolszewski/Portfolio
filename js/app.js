@@ -2,14 +2,14 @@ require('../scss/main.scss');
 $(document).ready(function() {
 
     //scroll down animation
-    $('.arrow > a, .menu > nav > ul > a').click(function() {
+    $('.arrow a, .menu nav ul a').click(function() {
         $('html, body').animate({
             scrollTop: $($(this).attr('href')).offset().top
         }, 1000);
         return false;
     });
     //scroll up animation
-    $('#scroll_top').click(function() {
+    $('#scrollToTop').click(function() {
         $('html,body').animate({
             scrollTop: 0
         }, 1000);
@@ -39,5 +39,16 @@ $(document).ready(function() {
         $('.scroll').css('display', 'inline-block')
     })
 
+    //mobile navigation
+    $(".fa-bars").on('click', function() {
+        $('.mobile_menu').css('display', 'flex');
+    })
 
+    $(".fa-times").on('click', function() {
+        $('.mobile_menu').css('display', 'none');
+    })
+
+    $(".container a").on('click', function() {
+        $('.mobile_menu').css('display', 'none');
+    })
 });
