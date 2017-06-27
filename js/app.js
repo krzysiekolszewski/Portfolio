@@ -16,12 +16,26 @@ $(document).ready(function() {
         return false;
     });
 
+
+    //game overlay
     $('.game').on('click', function() {
         $('.overlay').css('display', 'inline-block');
         $('#over_title').text("Pac-game")
         $('#over_text').text("Gra Pac-game opiera się na prostym silniku stworzonym w JavaScript. Gra polega na sterowaniu obiektem za pomocą strzałek i zbieraniu truskawek oraz bonusowych ciastek. Gra kończy się w momencie, gdy Pac uderzy w ścianę.");
         $('#code').attr('href', 'https://github.com/krzysiekolszewski/pac-game');
         $('#live').attr('href', 'https://krzysiekolszewski.github.io/pac-game');
+        $('#close').on('click', function() {
+            $('.overlay').css('display', 'none');
+        });
+    });
+
+    //website overlay
+    $('.webdev30').on('click', function() {
+        $('.overlay').css('display', 'inline-block');
+        $('#over_title').text("Webdev challenge 30")
+        $('#over_text').text('Projekt strony internetowej stworzony na podstawie szablonu psd z facebookowej strony "Weekly WebDev challenge"');
+        $('#code').attr('href', 'https://github.com/krzysiekolszewski/weekly30');
+        $('#live').attr('href', 'https://krzysiekolszewski.github.io/weekly30');
         $('#close').on('click', function() {
             $('.overlay').css('display', 'none');
         });
